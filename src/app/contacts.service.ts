@@ -9,44 +9,40 @@ import { HttpClient } from '@angular/common/http';
 export class ContactsService {
     private contactsSubject = new BehaviorSubject<Contact[]>([]);
 
-    constructor(private http:HttpClient) { 
+    constructor(private http: HttpClient) {
     }
 
-    getContacts(){
+    getContacts() {
         return this.http.get<Contact[]>('http://localhost:3000/contacts');
     }
 
-    getContactById(id){
+    getContactById(id) {
         return this.http.get<Contact>(`http://localhost:3000/contacts/${id}`);
     }
 
-    public addContact(contact:Contact){
-        if(!contact.picture)
-            contact.picture = "assets/default-user.png";
-        if(!contact.id)
-            contact.id = this.contactsSubject.value.length + 1;            
-        this.contactsSubject.next([...this.contactsSubject.value, contact ]);
+    public addContact(contact: Contact) {
+        return this.http.post('http://localhost:3000/contacts', contact);
     }
 
-    public updateContact(contact:Contact){
+    public updateContact(contact: Contact) {
         const contacts = this.contactsSubject.value;
-        let replaceIndex = contacts.findIndex( item => item.id == contact.id);
+        const replaceIndex = contacts.findIndex( item => item.id == contact.id);
         const newContacts = [
-            ...contacts.slice(0,replaceIndex), 
-            contact, 
-            ...contacts.slice(replaceIndex+1)
+            ...contacts.slice(0, replaceIndex),
+            contact,
+            ...contacts.slice(replaceIndex + 1)
         ];
         this.contactsSubject.next(newContacts);
     }
 
-    public removeContact(contact:Contact){
+    public removeContact(contact: Contact) {
         const contacts = this.contactsSubject.value;
-        let replaceIndex = contacts.findIndex( item => item.id == contact.id);
+        const replaceIndex = contacts.findIndex( item => item.id == contact.id);
         const newContacts = [
-            ...contacts.slice(0,replaceIndex), 
-            ...contacts.slice(replaceIndex+1)
+            ...contacts.slice(0, replaceIndex),
+            ...contacts.slice(replaceIndex + 1)
         ];
-        this.contactsSubject.next(newContacts);                
+        this.contactsSubject.next(newContacts);
     }
 
 }
