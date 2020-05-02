@@ -2,7 +2,7 @@
   "contacts": [
     {
       "id": 1,
-      "name": "Peter",
+      "name": "Peter Crouch",
       "picture": "http://localhost:3000/img/default-user.png",
       "phones": [
         {
@@ -19,7 +19,8 @@
         }
       ],
       "email": "peter@email.com",
-      "address": "Paseo de Gracia 20, 08002, Barcelona"
+      "address": "Paseo de Gracia 20, 08002, Barcelona",
+      "pictureFile": null
     },
     {
       "id": 2,
@@ -32,7 +33,7 @@
         }
       ],
       "email": "meli@sa.com",
-      "address": "Plaza Cataluña 1, 08002, Barcelona"      
+      "address": "Plaza Cataluña 1, 08002, Barcelona"
     },
     {
       "id": 3,
