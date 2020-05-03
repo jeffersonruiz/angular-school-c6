@@ -11,9 +11,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./contacts-list.component.scss']
 })
 export class ContactsListComponent implements OnInit {
-  public contacts$:Observable<Contact[]>;
+  public contacts$: Observable<Contact[]>;
   constructor(
-    public contactsService:ContactsService, 
+    public contactsService: ContactsService,
     public router: Router
   ) { }
 
@@ -21,8 +21,10 @@ export class ContactsListComponent implements OnInit {
     this.contacts$ = this.contactsService.getContacts();
   }
 
-  deleteContact(contact){
-    this.contactsService.removeContact(contact);
+  deleteContact(contact) {
+    this.contactsService.removeContact(contact).subscribe(() => {
+      this.contacts$ = this.contactsService.getContacts();
+    });
   }
 
 }
