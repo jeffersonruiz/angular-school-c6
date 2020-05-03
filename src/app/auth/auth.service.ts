@@ -2,29 +2,33 @@ import { Injectable } from '@angular/core';
 import {of, Observable} from 'rxjs';
 import {delay, tap} from 'rxjs/operators';
 import { User } from './user.interface';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import * as md5 from 'md5';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  public user:User = null;
-  public redirectUrl:string = null;
+  public user: User = null;
+  public redirectUrl: string = null;
 
-  constructor() {
-    this.user = JSON.parse(localStorage.getItem("user"));
+  constructor(private http: HttpClient) {
+    this.user = JSON.parse(localStorage.getItem('user'));
    }
 
-  login(email, password):Observable<User>{
-    return of({email:email, password:password, token:"123456"}).pipe(
-      delay(750),
+  login(email, password): Observable<User> {
+    const passwordHash = md5(password);
+    return this.http.post<User>(environment.apiUrl + '/signup', {email, password: passwordHash})
+    .pipe(
       tap(user => this.user = user),
-      tap(user => localStorage.setItem("user", JSON.stringify(user)))
+      tap(user => localStorage.setItem('user', JSON.stringify(user)))
     );
   }
 
-  logout(){
+  logout() {
     this.user = null;
-    localStorage.removeItem("user");
+    localStorage.removeItem('user');
   }
 }

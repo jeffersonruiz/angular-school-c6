@@ -2,8 +2,8 @@
   "contacts": [
     {
       "id": 1,
-      "name": "Peter",
-      "picture": "http://localhost:3000/img/default-user.png",
+      "name": "Peter Crouch 2",
+      "picture": "http://localhost:3000/img/f7ec322192366b29f375c3240539497b",
       "phones": [
         {
           "type": "work",
@@ -19,7 +19,8 @@
         }
       ],
       "email": "peter@email.com",
-      "address": "Paseo de Gracia 20, 08002, Barcelona"
+      "address": "Paseo de Gracia 20, 08002, Barcelona",
+      "pictureFile": null
     },
     {
       "id": 2,
@@ -32,7 +33,7 @@
         }
       ],
       "email": "meli@sa.com",
-      "address": "Plaza Cataluña 1, 08002, Barcelona"      
+      "address": "Plaza Cataluña 1, 08002, Barcelona"
     },
     {
       "id": 3,
@@ -160,6 +161,36 @@
       "email": "jdeep@universal.com",
       "token": "1234567890",
       "password": "pass2"
+    },
+    {
+      "email": "jfaridruiz@gmail.com",
+      "password": "81dc9bdb52d04dc20036dbd8313ed055",
+      "token": "eydi8in7p0h",
+      "id": 3
+    },
+    {
+      "email": "jfaridruiz@gmail.com",
+      "password": "81dc9bdb52d04dc20036dbd8313ed055",
+      "token": "9ndv7w6ksks",
+      "id": 4
+    },
+    {
+      "email": "jfaridruiz@gmail.com",
+      "password": "827ccb0eea8a706c4c34a16891f84e7b",
+      "token": "gdng1gyu2g",
+      "id": 5
+    },
+    {
+      "email": "jfaridruiz@gmail.com",
+      "password": "81dc9bdb52d04dc20036dbd8313ed055",
+      "token": "ly0zijr1rxq",
+      "id": 6
+    },
+    {
+      "email": "jfaridruiz@gmail.com",
+      "password": "0ba8bd73f5e0c2c6b0edc446c3b4360b",
+      "token": "pv1ys9e2r2i",
+      "id": 7
     }
   ]
 }

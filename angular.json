@@ -141,5 +141,8 @@
       }
     }
   },
-  "defaultProject": "angular-school-c6"
+  "defaultProject": "angular-school-c6",
+  "cli": {
+    "analytics": "74dc9c30-a43a-4b5a-9261-91e21ed3b3f7"
+  }
 }
