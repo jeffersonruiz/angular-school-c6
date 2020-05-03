@@ -2,8 +2,8 @@
   "contacts": [
     {
       "id": 1,
-      "name": "Peter",
-      "picture": "http://localhost:3000/img/default-user.png",
+      "name": "Peter Crouch",
+      "picture": "http://localhost:3000/img/f7ec322192366b29f375c3240539497b",
       "phones": [
         {
           "type": "work",
@@ -19,7 +19,8 @@
         }
       ],
       "email": "peter@email.com",
-      "address": "Paseo de Gracia 20, 08002, Barcelona"
+      "address": "Paseo de Gracia 20, 08002, Barcelona",
+      "pictureFile": {}
     },
     {
       "id": 2,
@@ -32,7 +33,7 @@
         }
       ],
       "email": "meli@sa.com",
-      "address": "Plaza Cataluña 1, 08002, Barcelona"      
+      "address": "Plaza Cataluña 1, 08002, Barcelona"
     },
     {
       "id": 3,
@@ -144,6 +145,20 @@
       ],
       "email": "kaycee@email.com",
       "address": "Arago 356, 08032, Barcelona"
+    },
+    {
+      "name": "Jefferson",
+      "picture": "http://localhost:3000/img/95230f71d99052995bcddf6175643b61",
+      "phones": [
+        {
+          "type": "mobile",
+          "number": "3013209413"
+        }
+      ],
+      "email": "jfaridruiz@gmail.com",
+      "address": "ewrwe",
+      "pictureFile": {},
+      "id": 10
     }
   ],
   "users": [
